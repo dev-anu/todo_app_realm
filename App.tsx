@@ -1,20 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import TaskList from './src/components/TaskList';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello World</Text>
+    <SafeAreaView style={styles.container}>
+     <View style={styles.semiContainer}>
+      <TaskList/>
+      </View>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#fff'
   },
+  semiContainer:{
+    padding:10
+  }
 });
